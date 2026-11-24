@@ -1,0 +1,103 @@
+<!--
+  Mã màn hình: M03 | Tên: M03_TrangChu | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Người cao tuổi — chữ 22px, nút lớn) | MẪU PHONG CÁCH THIẾT KẾ TOÀN NHÓM
+  Luồng chính 5 màn: M03 → M04a → M05c → M06a → M06b
+  Desktop: Sidebar + Header + Hero kiểm tra nhanh (gradient + khiên SVG + sao băng tuỳ chọn) + 3 card chức năng xếp ngang.
+  Mobile: 1 cột + Thanh điều hướng dưới 5 mục + Nút gọi nổi.
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh thông điệp cảnh báo nổi bật địa phương nếu cần cập nhật theo phường.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M03_TrangChu — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container m03-page">
+        <!-- Hero Kiểm tra nhanh: Gradient Navy -> Blue + Sao băng tuỳ chọn + Minh hoạ Khiên bảo mật -->
+        <section class="m03-hero" id="m03-hero" aria-label="Kiểm tra nhanh trong 10 giây">
+          <div class="m03-hero__content">
+            <span class="m03-hero__chip">Bảo vệ chủ động · Kiểm tra miễn phí</span>
+            <p class="m03-hero__eyebrow">Nghi ngờ số lạ, đường dẫn lạ hay số tài khoản?</p>
+            <h2 class="m03-hero__title">Kiểm tra trong 10 giây</h2>
+            <p class="m03-hero__desc">
+              Nhập số điện thoại, đường dẫn hoặc dán tin nhắn để nhận cảnh báo rõ ràng ngay lập tức.
+            </p>
+            <div class="m03-hero__actions">
+              <a class="btn btn--white m03-hero__cta" data-nav="M04a" href="../../nguoi-2/M04_KiemTra_SoDienThoai/index.html">
+                Kiểm tra ngay
+              </a>
+              <a class="btn btn--outline-light m03-hero__ai-btn" data-nav="M04b" href="../../nguoi-2/M04_KiemTra_DanTinNhan/index.html">
+                Dán tin nhắn nhờ AI kiểm tra
+              </a>
+            </div>
+          </div>
+
+          <div class="m03-hero__visual" aria-hidden="true">
+            <img src="../../shared/assets/icons/shield-hero.svg" alt="" width="200" height="200">
+          </div>
+        </section>
+
+        <!-- 3 thẻ chức năng chính: Desktop 3 cột / Tablet 2 cột / Mobile 1 cột -->
+        <section aria-label="Thao tác nhanh">
+          <div class="grid-3">
+            <a class="card card--interactive m03-action-card m03-action-card--danger" data-nav="M06a" href="../../nguoi-3/M06_NguoiThan_DanhSach/index.html">
+              <div class="m03-action-card__head">
+                <span class="icon-box icon-box--danger" id="m03-icon-call"></span>
+                <span class="badge badge--danger">1 chạm</span>
+              </div>
+              <h3 class="text-card-title">Gọi người thân</h3>
+              <p class="text-sub">Gửi cảnh báo sẵn nội dung hoặc gọi ngay cho con cháu đã chỉ định.</p>
+            </a>
+
+            <a class="card card--interactive m03-action-card m03-action-card--blue" data-nav="M08a" href="../../nguoi-3/M08_BaoCao_Form/index.html">
+              <div class="m03-action-card__head">
+                <span class="icon-box icon-box--blue" id="m03-icon-report"></span>
+                <span class="badge badge--soft-blue">Cộng đồng</span>
+              </div>
+              <h3 class="text-card-title">Báo cáo lừa đảo</h3>
+              <p class="text-sub">Ghi nhận số lạ, đường dẫn giả để cảnh báo sớm cho bà con trong phường.</p>
+            </a>
+
+            <a class="card card--interactive m03-action-card m03-action-card--safe" data-nav="M09" href="../../nguoi-3/M09_DanhSachBaiHoc/index.html">
+              <div class="m03-action-card__head">
+                <span class="icon-box icon-box--safe" id="m03-icon-learn"></span>
+                <span class="badge badge--safe">3/10 bài</span>
+              </div>
+              <h3 class="text-card-title">Học 1 phút</h3>
+              <p class="text-sub">10 tình huống lừa đảo phổ biến ngắn gọn, có giọng nói và bài kiểm tra.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Thanh tóm tắt tình hình địa phương dẫn sang Thống kê -->
+        <section class="card m03-local-strip" aria-label="Cảnh báo nhanh địa phương">
+          <div class="m03-local-strip__info">
+            <span class="badge badge--warning">Cảnh báo mới tại Phường Trấn Biên</span>
+            <p class="text-sub" style="margin-top:6px">
+              Đang tăng nhanh chiêu giả danh nhân viên điện lực báo nợ tiền điện (14 lượt tháng 11/2026 — dữ liệu mẫu).
+            </p>
+          </div>
+          <a class="btn btn--secondary btn--inline" data-nav="M12a" href="../../nguoi-4/M12_DoiTinhNguyen/index.html">
+            Xem thống kê địa phương
+          </a>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

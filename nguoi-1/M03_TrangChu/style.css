@@ -1,0 +1,106 @@
+/* M03_TrangChu — Scoped styles (Người 1 · Mẫu phong cách thiết kế toàn nhóm) */
+.m03-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card-lg);
+  background: var(--grad-hero-night);
+  color: #FFFFFF;
+  padding: clamp(24px, 3.2vw, 40px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.m03-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.m03-hero__chip {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7DD3FC;
+  background-color: rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+}
+
+.m03-hero__eyebrow { font-size: 16px; color: #BFD4E8; }
+.m03-hero__title { font-size: clamp(26px, 3.4vw, 38px); font-weight: 600; color: #FFFFFF; line-height: 1.2; }
+.m03-hero__desc { font-size: 16px; color: #BFD4E8; max-width: 560px; }
+
+.m03-hero__actions {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.m03-hero__cta {
+  min-height: 60px;
+  padding: 0 28px;
+  font-weight: 600;
+}
+
+.m03-hero__ai-btn {
+  min-height: 60px;
+}
+
+.m03-hero__visual {
+  position: relative;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.m03-action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 4px solid var(--brand-blue);
+}
+
+.m03-action-card--danger { border-top-color: var(--color-danger); }
+.m03-action-card--blue { border-top-color: var(--brand-blue); }
+.m03-action-card--safe { border-top-color: var(--color-safe); }
+
+.m03-action-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.m03-local-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (max-width: 639px) {
+  .m03-hero__cta,
+  .m03-hero__ai-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .m03-hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  }
+  .m03-hero__visual {
+    display: flex;
+  }
+}

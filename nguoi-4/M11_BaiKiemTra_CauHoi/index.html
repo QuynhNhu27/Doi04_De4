@@ -1,0 +1,58 @@
+<!--
+  Mã màn hình: M11a | Tên: M11_BaiKiemTra_CauHoi | Thành viên: Người 4 (feat/member-4)
+  Nhóm: B | Desktop 2 cột (trái: khung mô phỏng tin nhắn giả; phải: câu hỏi, đáp án, giải thích, nút Câu tiếp).
+  LƯU Ý: Đường dẫn mẫu quatang-trian.top chỉ hiển thị dạng chữ thuần, không tạo thẻ <a> bấm được.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung bộ 10 câu hỏi trắc nghiệm nhận diện tương ứng 10 bài học.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M11_BaiKiemTra_CauHoi — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="grid-split-7-5">
+          <!-- Khung mô phỏng tình huống tin nhắn giả -->
+          <section class="card m11a-sms-card">
+            <span class="badge badge--warning" style="align-self:flex-start">Tình huống tin nhắn mẫu (giả lập)</span>
+            <div class="m11a-sms-bubble" id="m11a-sms"></div>
+            <p class="text-sub" style="font-size:13px">Đường dẫn hiển thị dạng chữ thuần để đảm bảo an toàn, không bấm mở được.</p>
+          </section>
+
+          <!-- Khu vực trả lời và giải thích -->
+          <section class="card m11a-answer-card">
+            <h2 class="text-title" id="m11a-question">Theo bạn, đây là gì?</h2>
+
+            <div class="m11a-choices">
+              <button type="button" class="btn btn--secondary m11a-choice" data-ans="scam">Lừa đảo</button>
+              <button type="button" class="btn btn--secondary m11a-choice" data-ans="safe">An toàn</button>
+            </div>
+
+            <div class="m11a-explain is-hidden anim-explain-bounce" id="m11a-explain" aria-live="polite">
+              <p class="text-card-title" id="m11a-exp-title"></p>
+              <p class="text-sub" id="m11a-exp-body" style="color:var(--color-text)"></p>
+            </div>
+
+            <button type="button" class="btn btn--primary btn--full" id="m11a-next">Câu tiếp theo</button>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

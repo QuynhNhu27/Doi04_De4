@@ -1,0 +1,4 @@
+/* M06_NguoiThan_DaGui — Scoped styles (Người 3) */
+.m06b-card { padding: 36px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+.m06b-icon { width: 84px; height: 84px; color: var(--color-safe); }
+.m06b-icon svg { width: 84px; height: 84px; }

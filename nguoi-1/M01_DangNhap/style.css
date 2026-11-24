@@ -1,0 +1,27 @@
+/* M01_DangNhap — Scoped styles (Người 1) */
+.m01a-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7DD3FC;
+  background-color: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+}
+
+.m01a-dot { width: 10px; height: 10px; border-radius: 999px; flex-shrink: 0; }
+.m01a-dot--cyan { background-color: #38BDF8; box-shadow: 0 0 10px #38BDF8; }
+.m01a-dot--teal { background-color: #14B8A6; box-shadow: 0 0 10px #14B8A6; }
+.m01a-dot--purple { background-color: #8B5CF6; box-shadow: 0 0 10px #8B5CF6; }
+
+.m01a-form-title { font-size: 26px; font-weight: 600; color: #FFFFFF; }
+.m01a-form-sub { font-size: 15px; color: #9FB6CC; margin-top: 4px; }
+.m01a-form { display: flex; flex-direction: column; gap: 16px; }
+.m01a-field { display: flex; flex-direction: column; gap: 6px; }
+.m01a-label { font-size: 16px; font-weight: 500; color: #EAF1F8; }
+.m01a-switch { text-align: center; font-size: 16px; color: #9FB6CC; }
+.m01a-link { color: #38BDF8; font-weight: 500; text-decoration: underline; }
+.m01a-divider { display: flex; align-items: center; gap: 12px; color: #93A8BE; font-size: 14px; }
+.m01a-divider::before, .m01a-divider::after { content: ''; flex: 1; height: 1px; background-color: rgba(148, 197, 255, 0.22); }

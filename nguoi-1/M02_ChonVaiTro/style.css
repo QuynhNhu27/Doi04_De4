@@ -1,0 +1,26 @@
+/* M02_ChonVaiTro — Scoped styles (Người 1) */
+.m02-wrapper { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px; }
+.m02-container { width: 100%; max-width: 1040px; display: flex; flex-direction: column; gap: 24px; }
+.m02-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.m02-role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 12px;
+  cursor: pointer;
+  min-height: 180px;
+}
+.m02-role-card.is-selected {
+  border: 2px solid var(--brand-blue);
+  background-color: var(--color-primary-soft);
+  box-shadow: var(--shadow-glow-blue);
+}
+.m02-ward-card {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}

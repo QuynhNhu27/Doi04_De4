@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="heroShieldOuter" x1="36" y1="20" x2="204" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="48%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="heroShieldInner" x1="62" y1="42" x2="178" y2="194" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0C3B6E"/>
+      <stop offset="100%" stop-color="#03142B"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.38"/>
+      <stop offset="70%" stop-color="#6366F1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#03142B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="url(#heroGlow)"/>
+  <circle cx="120" cy="120" r="92" stroke="#38BDF8" stroke-opacity="0.24" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="120" cy="120" r="74" stroke="#8B5CF6" stroke-opacity="0.28" stroke-width="1.5"/>
+  <path d="M120 26L46 56v56c0 48 31 84.5 74 96 43-11.5 74-48 74-96V56l-74-30z" fill="url(#heroShieldOuter)"/>
+  <path d="M120 38L58 63v48c0 41.2 26.2 72.5 62 82.8 35.8-10.3 62-41.6 62-82.8V63l-62-25z" fill="url(#heroShieldInner)"/>
+  <path d="M90 119l21 21 41-44" stroke="#38BDF8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.35"/>
+  <path d="M90 119l21 21 41-44" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="186" cy="54" r="5" fill="#38BDF8"/>
+  <circle cx="48" cy="172" r="4" fill="#14B8A6"/>
+  <circle cx="196" cy="158" r="3.5" fill="#8B5CF6"/>
+</svg>

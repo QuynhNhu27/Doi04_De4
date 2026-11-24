@@ -1,0 +1,7 @@
+# DECISIONS — Nhật ký quyết định kiến trúc & thiết kế (v2.0)
+
+1. **Chuyển đổi từ khung cố định 360×800 sang Website Responsive hoàn chỉnh:** Đã cập nhật `RULE.md` và `CHIA-VIEC.md` theo chấp thuận của người quản lý dự án; bỏ khoá kích thước 360px và bảng toạ độ pixel tuyệt đối, thay bằng hệ thống Responsive Mobile (`<768px`), Tablet (`768–1023px`), Desktop (`>=1024px`) với Sidebar 256px và CSS Grid đa cột.
+2. **Mở rộng phong cách Modern Cybersecurity + Friendly Digital Safety:** Bổ sung bảng màu mở rộng (`#2563EB`, `#38BDF8`, `#14B8A6`, `#8B5CF6`, `#6366F1`), 4 gradient dùng chung, đổ bóng mềm, glassmorphism và SVG khiên bảo mật (`shield-hero.svg`), nhưng vẫn giữ độ tương phản WCAG AA và Nhóm A chữ 22px / nút 64px cho người cao tuổi.
+3. **Triển khai nền sao băng thực sự (`MeteorBackground`):** Dùng CSS animation + 3 lớp nebula + 40 sao + 8 vệt sao băng lệch pha trên Desktop (tự động giảm còn 20 sao + 4 vệt trên Mobile để đảm bảo hiệu năng). Luôn bật ở M01, tuỳ chọn ở Hero M03 và toàn màn hình Nhóm B ở chế độ tối; tích hợp công tắc **Hiệu ứng chuyển động** trong `M13` và tôn trọng `prefers-reduced-motion`.
+4. **Tổ chức lại thành 4 thư mục độc lập (`nguoi-1/` → `nguoi-4/`) + `shared/`:** Đã di chuyển toàn bộ 30 bản và xoá thư mục cũ `pages/`, `styles/`, `scripts/`, `assets/` để tránh trùng lặp.
+5. **Dùng chung 1 module thống kê (`shared/components/StatsDashboard.js`):** `M12a`, `M12b` và `M12a_Toi` dùng chung dữ liệu và component, không lặp logic.

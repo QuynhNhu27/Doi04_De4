@@ -1,0 +1,65 @@
+<!--
+  Mã màn hình: M01b | Tên: M01_DangKy | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Người cao tuổi — chữ 22px, nút 64px) | Layout: AuthLayout 2 cột Desktop + MeteorBackground.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung kiểm tra hợp lệ tên & số điện thoại mẫu (không lưu mật khẩu thật).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M01_DangKy — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="auth-shell m01b-page">
+    <div class="auth-grid">
+      <section class="auth-brand">
+        <img class="auth-brand__shield" src="../../shared/assets/icons/shield-hero.svg" alt="Khiên bảo mật Lá Chắn Số">
+        <h1 class="auth-brand__title">Lá Chắn Số</h1>
+        <p class="auth-brand__slogan">
+          Tạo tài khoản nhanh để lưu danh sách người thân tin cậy và theo dõi bài học kỹ năng số.
+        </p>
+      </section>
+
+      <main class="auth-form-card">
+        <div>
+          <h2 class="m01b-form-title">Đăng ký tài khoản</h2>
+          <p class="m01b-form-sub">Chỉ mất 30 giây — bảo vệ cả gia đình trước lừa đảo số</p>
+        </div>
+
+        <form class="m01b-form" id="m01b-register-form" novalidate>
+          <div class="m01b-field">
+            <label class="m01b-label" for="m01b-name">Họ tên</label>
+            <input id="m01b-name" type="text" class="input" placeholder="Ví dụ: Bác Tư">
+          </div>
+          <div class="m01b-field">
+            <label class="m01b-label" for="m01b-phone">Số điện thoại</label>
+            <input id="m01b-phone" type="tel" class="input" placeholder="Nhập số điện thoại">
+          </div>
+          <div class="m01b-field">
+            <label class="m01b-label" for="m01b-password">Mật khẩu</label>
+            <input id="m01b-password" type="password" class="input" placeholder="Tạo mật khẩu">
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Đăng ký</button>
+        </form>
+
+        <p class="m01b-switch">
+          Đã có tài khoản?
+          <a class="m01b-link" data-nav="M01a" href="../M01_DangNhap/index.html">Đăng nhập</a>
+        </p>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

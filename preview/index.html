@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="1" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview 30 bản giao diện (Desktop / Tablet / Mobile) — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../shared/styles/base.css">
+  <link rel="stylesheet" href="../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../shared/styles/themes.css">
+  <style>
+    .pv-page { padding: 20px 16px 64px; max-width: 1480px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .pv-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .pv-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .pv-stage-card { display: flex; flex-direction: column; gap: 14px; }
+    .pv-stage-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    .pv-viewport-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pv-iframe-wrap {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--color-bg-subtle);
+      border-radius: 16px;
+      border: 1px solid var(--color-border);
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .pv-iframe {
+      border: 1px solid var(--color-border-strong);
+      border-radius: 14px;
+      background: #FFFFFF;
+      height: 760px;
+      transition: width 220ms ease;
+    }
+    .pv-member { display: flex; flex-direction: column; gap: 12px; }
+    .pv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .pv-item { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
+    .pv-item__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .pv-item__actions { display: flex; gap: 8px; margin-top: auto; padding-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="pv-page">
+    <header class="card pv-header">
+      <div>
+        <span class="badge badge--soft-blue">Khu vực Preview cho nhóm phát triển · 30/30 bản giao diện</span>
+        <h1 class="text-title" style="margin-top:6px">Lá Chắn Số — Kiểm thử Responsive 4 thành viên</h1>
+        <p class="text-sub">Không xuất hiện trong giao diện sản phẩm khi trình diễn · Bấm "Xem khung" để thử Desktop / Tablet / Mobile</p>
+      </div>
+      <div class="pv-controls">
+        <a class="btn btn--secondary btn--inline" href="../index.html">Về cổng vào</a>
+        <div id="pv-theme-slot"></div>
+        <button type="button" class="btn btn--secondary btn--inline" id="pv-reset">Đặt lại dữ liệu demo</button>
+      </div>
+    </header>
+
+    <!-- Khung xem thử đa kích thước Desktop / Tablet / Mobile -->
+    <section class="card pv-stage-card" id="pv-stage">
+      <div class="pv-stage-bar">
+        <div>
+          <strong class="text-card-title" id="pv-active-label">M03_TrangChu (Người 1)</strong>
+          <p class="text-sub" id="pv-active-path">nguoi-1/M03_TrangChu/index.html</p>
+        </div>
+        <div class="pv-viewport-tabs" role="group" aria-label="Chọn kích thước màn hình kiểm thử">
+          <button type="button" class="pill-choice is-active" data-vp="100%">Desktop (Full / 1440px)</button>
+          <button type="button" class="pill-choice" data-vp="1024px">Laptop (1024px)</button>
+          <button type="button" class="pill-choice" data-vp="768px">Tablet (768px)</button>
+          <button type="button" class="pill-choice" data-vp="390px">Mobile (390px)</button>
+          <button type="button" class="pill-choice" data-vp="360px">Mobile chuẩn (360px)</button>
+          <a class="btn btn--primary btn--inline" id="pv-open-tab" href="../nguoi-1/M03_TrangChu/index.html" target="_blank" rel="noopener">Mở toàn màn hình</a>
+        </div>
+      </div>
+      <div class="pv-iframe-wrap">
+        <iframe id="pv-iframe" class="pv-iframe" style="width:100%" src="../nguoi-1/M03_TrangChu/index.html" title="Xem trước giao diện"></iframe>
+      </div>
+    </section>
+
+    <div id="pv-members-root" style="display:flex;flex-direction:column;gap:28px"></div>
+  </div>
+
+  <script type="module">
+    import { initTheme } from '../shared/scripts/theme.js';
+    import { createThemeSwitcher } from '../shared/components/ThemeSwitcher.js';
+    import { resetState } from '../shared/scripts/store.js';
+
+    initTheme();
+    document.getElementById('pv-theme-slot')?.appendChild(createThemeSwitcher());
+
+    const MEMBERS = [
+      {
+        title: 'NGƯỜI 1 — nguoi-1/ (8 bản · nhánh feat/member-1)',
+        items: [
+          { code: 'M00', name: 'M00_ThuVien', status: 'Khung + Mẫu', group: 'A & B', path: '../nguoi-1/M00_ThuVien/index.html' },
+          { code: 'M01a', name: 'M01_DangNhap', status: 'Mẫu chuẩn + Sao băng', group: 'Nhóm A', path: '../nguoi-1/M01_DangNhap/index.html' },
+          { code: 'M01b', name: 'M01_DangKy', status: 'Khung + Sao băng', group: 'Nhóm A', path: '../nguoi-1/M01_DangKy/index.html' },
+          { code: 'M02', name: 'M02_ChonVaiTro', status: 'Khung responsive', group: 'Nhóm A', path: '../nguoi-1/M02_ChonVaiTro/index.html' },
+          { code: 'M03', name: 'M03_TrangChu', status: 'Mẫu chuẩn · Luồng chính', group: 'Nhóm A', path: '../nguoi-1/M03_TrangChu/index.html' },
+          { code: 'M04c', name: 'M04_KiemTra_DangNghe', status: 'Khung + Sóng âm', group: 'Nhóm A', path: '../nguoi-1/M04_KiemTra_DangNghe/index.html' },
+          { code: 'M13', name: 'M13_CaNhan', status: 'Khung + Cài đặt đầy đủ', group: 'Nhóm A', path: '../nguoi-1/M13_CaNhan/index.html' },
+          { code: 'E00', name: 'E00_MatMang', status: 'Khung trạng thái', group: 'Nhóm A', path: '../nguoi-1/E00_MatMang/index.html' },
+        ],
+      },
+      {
+        title: 'NGƯỜI 2 — nguoi-2/ (8 bản · nhánh feat/member-2)',
+        items: [
+          { code: 'M04a', name: 'M04_KiemTra_SoDienThoai', status: 'Khung · Luồng chính', group: 'Nhóm A', path: '../nguoi-2/M04_KiemTra_SoDienThoai/index.html' },
+          { code: 'M04b', name: 'M04_KiemTra_DanTinNhan', status: 'Khung · AI mô phỏng', group: 'Nhóm A', path: '../nguoi-2/M04_KiemTra_DanTinNhan/index.html' },
+          { code: 'M05a', name: 'M05_KetQua_AnToan', status: 'Khung responsive', group: 'Nhóm A', path: '../nguoi-2/M05_KetQua_AnToan/index.html' },
+          { code: 'M05b', name: 'M05_KetQua_NghiNgo', status: 'Khung responsive', group: 'Nhóm A', path: '../nguoi-2/M05_KetQua_NghiNgo/index.html' },
+          { code: 'M05c', name: 'M05_KetQua_NguyHiem', status: 'Khung · Luồng chính', group: 'Nhóm A', path: '../nguoi-2/M05_KetQua_NguyHiem/index.html' },
+          { code: 'M05c_Toi', name: 'M05_KetQua_NguyHiem_Toi', status: 'Khung · Chế độ tối', group: 'Nhóm A', path: '../nguoi-2/M05_KetQua_NguyHiem_Toi/index.html' },
+          { code: 'E04', name: 'E04_KiemTra_NhapSai', status: 'Khung trạng thái', group: 'Nhóm A', path: '../nguoi-2/E04_KiemTra_NhapSai/index.html' },
+          { code: 'E05', name: 'E05_KetQua_ChuaCoDuLieu', status: 'Khung trạng thái', group: 'Nhóm A', path: '../nguoi-2/E05_KetQua_ChuaCoDuLieu/index.html' },
+        ],
+      },
+      {
+        title: 'NGƯỜI 3 — nguoi-3/ (7 bản · nhánh feat/member-3)',
+        items: [
+          { code: 'M06a', name: 'M06_NguoiThan_DanhSach', status: 'Khung · Luồng chính', group: 'Nhóm A', path: '../nguoi-3/M06_NguoiThan_DanhSach/index.html' },
+          { code: 'M06b', name: 'M06_NguoiThan_DaGui', status: 'Khung · Luồng chính', group: 'Nhóm A', path: '../nguoi-3/M06_NguoiThan_DaGui/index.html' },
+          { code: 'M07', name: 'M07_ThemNguoiThan', status: 'Khung biểu mẫu', group: 'Nhóm A', path: '../nguoi-3/M07_ThemNguoiThan/index.html' },
+          { code: 'M08a', name: 'M08_BaoCao_Form', status: 'Khung biểu mẫu', group: 'Nhóm A', path: '../nguoi-3/M08_BaoCao_Form/index.html' },
+          { code: 'M08b', name: 'M08_BaoCao_ThanhCong', status: 'Khung kết quả', group: 'Nhóm A', path: '../nguoi-3/M08_BaoCao_ThanhCong/index.html' },
+          { code: 'M09', name: 'M09_DanhSachBaiHoc', status: 'Khung · 10 bài học', group: 'Nhóm B', path: '../nguoi-3/M09_DanhSachBaiHoc/index.html' },
+          { code: 'E06', name: 'E06_NguoiThan_Trong', status: 'Khung trạng thái', group: 'Nhóm A', path: '../nguoi-3/E06_NguoiThan_Trong/index.html' },
+        ],
+      },
+      {
+        title: 'NGƯỜI 4 — nguoi-4/ (7 bản · nhánh feat/member-4)',
+        items: [
+          { code: 'M10', name: 'M10_BaiHoc_ChiTiet', status: 'Khung · 5 bước', group: 'Nhóm B', path: '../nguoi-4/M10_BaiHoc_ChiTiet/index.html' },
+          { code: 'M11a', name: 'M11_BaiKiemTra_CauHoi', status: 'Khung tương tác', group: 'Nhóm B', path: '../nguoi-4/M11_BaiKiemTra_CauHoi/index.html' },
+          { code: 'M11b', name: 'M11_BaiKiemTra_KetQua', status: 'Khung · 8/10', group: 'Nhóm B', path: '../nguoi-4/M11_BaiKiemTra_KetQua/index.html' },
+          { code: 'M12a', name: 'M12_DoiTinhNguyen', status: 'Khung dashboard', group: 'Nhóm B', path: '../nguoi-4/M12_DoiTinhNguyen/index.html' },
+          { code: 'M12b', name: 'M12_DoiTinhNguyen_MayTinh', status: 'Khung desktop', group: 'Nhóm B', path: '../nguoi-4/M12_DoiTinhNguyen_MayTinh/index.html' },
+          { code: 'M12a_Toi', name: 'M12_DoiTinhNguyen_Toi', status: 'Khung · Tối sao băng', group: 'Nhóm B', path: '../nguoi-4/M12_DoiTinhNguyen_Toi/index.html' },
+          { code: 'E12', name: 'E12_ThongKe_Trong', status: 'Khung trạng thái', group: 'Nhóm B', path: '../nguoi-4/E12_ThongKe_Trong/index.html' },
+        ],
+      },
+    ];
+
+    const iframe = document.getElementById('pv-iframe');
+    const activeLabel = document.getElementById('pv-active-label');
+    const activePath = document.getElementById('pv-active-path');
+    const openTab = document.getElementById('pv-open-tab');
+
+    document.querySelectorAll('[data-vp]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-vp]').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        iframe.style.width = btn.getAttribute('data-vp');
+      });
+    });
+
+    const root = document.getElementById('pv-members-root');
+    root.innerHTML = MEMBERS.map(
+      (m) => `
+        <section class="pv-member">
+          <h2 class="text-card-title">${m.title}</h2>
+          <div class="pv-grid">
+            ${m.items
+              .map(
+                (s) => `
+                  <article class="card pv-item">
+                    <div class="pv-item__top">
+                      <span class="badge badge--soft-blue">${s.code}</span>
+                      <span class="text-sub" style="font-size:12px">${s.group}</span>
+                    </div>
+                    <strong style="font-size:16px">${s.name}</strong>
+                    <span class="badge badge--safe" style="align-self:flex-start;font-size:12px;padding:3px 10px">${s.status}</span>
+                    <div class="pv-item__actions">
+                      <button type="button" class="btn btn--primary btn--inline" style="flex:1" data-load="${s.path}" data-name="${s.code} — ${s.name}">Xem khung</button>
+                      <a class="btn btn--secondary btn--inline" href="${s.path}">Mở</a>
+                    </div>
+                  </article>
+                `
+              )
+              .join('')}
+          </div>
+        </section>
+      `
+    ).join('');
+
+    root.querySelectorAll('[data-load]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const p = btn.getAttribute('data-load');
+        iframe.src = p;
+        activeLabel.textContent = btn.getAttribute('data-name');
+        activePath.textContent = p.replace('../', '');
+        openTab.href = p;
+        document.getElementById('pv-stage')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    document.getElementById('pv-reset')?.addEventListener('click', () => {
+      resetState();
+      iframe.src = iframe.src;
+    });
+  </script>
+</body>
+</html>

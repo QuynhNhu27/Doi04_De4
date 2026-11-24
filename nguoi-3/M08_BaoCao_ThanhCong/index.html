@@ -1,0 +1,48 @@
+<!--
+  Mã màn hình: M08b | Tên: M08_BaoCao_ThanhCong | Thành viên: Người 3 (feat/member-3)
+  Nhóm: A | Xác nhận ghi nhận báo cáo mô phỏng kèm mã mẫu BC-1124-087.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung nút sao chép mã báo cáo BC-1124-087.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M08_BaoCao_ThanhCong — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <section class="card center-narrow" style="padding:36px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+          <div id="m08b-icon" style="width:84px;height:84px;color:var(--color-safe)" aria-hidden="true"></div>
+          <h2 class="text-title">Đã ghi nhận báo cáo</h2>
+
+          <div class="card" style="width:100%;background:var(--color-bg-subtle)">
+            <p class="text-body-medium">Mã báo cáo mẫu: <strong id="m08b-code">BC-1124-087</strong></p>
+            <p class="text-sub" style="margin-top:4px">Bác giữ mã này để tra cứu (bản mô phỏng, chưa truyền dữ liệu tới cơ quan Công an)</p>
+          </div>
+
+          <div class="card--soft-safe" style="width:100%">
+            <p class="text-body" style="font-size:18px">
+              Cảm ơn bác. Thông tin này sẽ giúp cảnh báo sớm cho bà con ở phường mình.
+            </p>
+          </div>
+
+          <button type="button" class="btn btn--primary btn--full" data-nav="M03">Về trang chủ</button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

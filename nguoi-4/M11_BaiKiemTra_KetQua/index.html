@@ -1,0 +1,54 @@
+<!--
+  Mã màn hình: M11b | Tên: M11_BaiKiemTra_KetQua | Thành viên: Người 4 (feat/member-4)
+  Nhóm: B | Điểm số 8/10 chạy số + huy hiệu Mắt tinh nảy + danh sách 2 bài cần học lại.
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh huy hiệu thành tích và nút chia sẻ kết quả học tập (mô phỏng).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M11_BaiKiemTra_KetQua — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <section class="card center-narrow m11b-card">
+          <div class="m11b-ring" aria-label="Điểm 8 trên 10">
+            <span class="m11b-score" id="m11b-score">8/10</span>
+          </div>
+
+          <div class="m11b-badge-wrap anim-badge-pop">
+            <span class="m11b-badge" id="m11b-badge"></span>
+            <span class="badge badge--warning">Huy hiệu: Mắt tinh</span>
+          </div>
+
+          <h2 class="text-title" id="m11b-summary">Bạn nhận ra 8 trong 10 tình huống lừa đảo</h2>
+
+          <div class="card" style="width:100%;text-align:left;background:var(--color-bg-subtle)">
+            <p class="text-sub-medium" style="margin-bottom:8px">Bạn còn nhầm ở 2 tình huống:</p>
+            <ul id="m11b-missed" style="display:flex;flex-direction:column;gap:6px"></ul>
+          </div>
+
+          <div class="m11b-actions">
+            <button type="button" class="btn btn--primary btn--full" data-nav="M10">Học lại 2 bài này</button>
+            <button type="button" class="btn btn--secondary btn--full" data-nav="M03">Về trang chủ</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

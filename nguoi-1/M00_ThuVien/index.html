@@ -1,0 +1,111 @@
+<!--
+  Mã màn hình: M00 | Tên: M00_ThuVien | Thành viên: Người 1 (feat/member-1)
+  Nhóm: Thư viện dùng chung cho Nhóm A & Nhóm B | Tham chiếu: RULE.md v2.0 mục 2, 3, 5, 7, 8
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung ghi chú hướng dẫn sử dụng chi tiết cho từng component khi phối hợp với nhóm trưởng.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M00_ThuVien — Design System Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="m00-page">
+  <div class="m00-container">
+    <header class="m00-header card">
+      <div>
+        <span class="badge badge--soft-blue">Design System v2.0 · Responsive Web</span>
+        <h1 class="text-title" style="margin-top:8px">M00_ThuVien — Thư viện giao diện dùng chung</h1>
+        <p class="text-sub">Modern Cybersecurity Dashboard + Friendly Digital Safety · Đồng bộ cho 4 thành viên</p>
+      </div>
+      <div class="m00-actions">
+        <div id="m00-theme-slot"></div>
+        <a class="btn btn--secondary btn--inline" href="../../preview/index.html">Mở Preview 30 bản</a>
+      </div>
+    </header>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">1. Bảng màu thương hiệu & Trạng thái</h2>
+      <div class="m00-swatch-grid" id="m00-palette"></div>
+    </section>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">2. Hệ thống Gradient dùng chung</h2>
+      <div class="grid-2" id="m00-gradients"></div>
+    </section>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">3. Typography Nhóm A (Người cao tuổi) & Nhóm B (Học sinh / Tình nguyện)</h2>
+      <div class="grid-2">
+        <div class="card" data-group="A">
+          <span class="badge badge--soft-blue">Nhóm A · M01–M08, M13</span>
+          <p class="text-title m00-mt">Tiêu đề màn 24–28px</p>
+          <p class="text-card-title m00-mt">Tiêu đề thẻ 22px</p>
+          <p class="text-body m00-mt">Chữ nội dung 22px — ưu tiên dễ đọc cho người 65 tuổi</p>
+          <p class="text-sub m00-mt">Chữ phụ 16px</p>
+        </div>
+        <div class="card" data-group="B">
+          <span class="badge badge--purple">Nhóm B · M09–M12</span>
+          <p class="text-title m00-mt">Tiêu đề màn 22–26px</p>
+          <p class="text-card-title m00-mt">Tiêu đề thẻ 18–20px</p>
+          <p class="text-body m00-mt">Chữ nội dung 18px — gọn gàng, sinh động cho học sinh & TNV</p>
+          <p class="text-sub m00-mt">Chữ phụ 15px</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">4. Button, Input, ProgressBar, Badge, LoadingState</h2>
+      <div class="grid-2">
+        <div class="card m00-stack" data-group="A">
+          <p class="text-sub-medium">Nhóm A (Nút 64px / 56px, Ô nhập 60px)</p>
+          <button type="button" class="btn btn--primary btn--full">Button Primary (Gradient)</button>
+          <button type="button" class="btn btn--danger btn--full">Button Danger (Cảnh báo)</button>
+          <button type="button" class="btn btn--secondary btn--full">Button Secondary</button>
+          <input type="text" class="input" placeholder="Ô nhập liệu Nhóm A (60px)">
+        </div>
+        <div class="card m00-stack" data-group="B">
+          <p class="text-sub-medium">Nhóm B & Thành phần phụ trợ</p>
+          <button type="button" class="btn btn--ai btn--full">Button AI (Blue → Purple)</button>
+          <div class="m00-badges-row">
+            <span class="badge badge--soft-blue">Phường Trấn Biên</span>
+            <span class="badge badge--safe">AN TOÀN</span>
+            <span class="badge badge--warning">NGHI NGỜ</span>
+            <span class="badge badge--danger">NGUY HIỂM</span>
+            <span class="badge badge--purple">AI Hỗ trợ</span>
+          </div>
+          <div id="m00-progress-slot"></div>
+          <div id="m00-loading-slot"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">5. AlertCard (3 mức cảnh báo bắt buộc đủ Màu + Icon + Chữ)</h2>
+      <div class="grid-3" id="m00-alerts"></div>
+    </section>
+
+    <section class="m00-section">
+      <h2 class="text-card-title">6. MeteorBackground (Nền sao băng thực sự — CSS Animation)</h2>
+      <div class="m00-meteor-demo" id="m00-meteor-demo">
+        <div class="m00-meteor-overlay">
+          <span class="badge" style="background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.25)">MeteorBackground Live</span>
+          <h3 style="color:#fff;font-size:22px;margin-top:8px">Bầu trời đêm navy + 40 sao + 8 sao băng chéo lệch pha</h3>
+          <p style="color:#BFD4E8;font-size:15px">Đầu trắng sáng, đuôi gradient cyan → xanh dương, nebula glow, không chặn tương tác chuột.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* M06_NguoiThan_DanhSach — Scoped styles (Người 3) */
+.m06a-list-col, .m06a-side-col, .m06a-list { display: flex; flex-direction: column; gap: 16px; }
+.m06a-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.m06a-info { flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.m06a-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }

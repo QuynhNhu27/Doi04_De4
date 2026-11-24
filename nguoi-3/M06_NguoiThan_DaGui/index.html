@@ -1,0 +1,45 @@
+<!--
+  Mã màn hình: M06b | Tên: M06_NguoiThan_DaGui | Thành viên: Người 3 (feat/member-3)
+  Nhóm: A | KẾT THÚC LUỒNG CHÍNH 5 MÀN: M03 → M04a → M05c → M06a → M06b.
+  TODO thành viên cần hoàn thiện:
+  - Rà soát thông điệp an tâm và nhắc không chuyển tiền hiển thị rõ trên mọi màn hình.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M06_NguoiThan_DaGui — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <section class="card center-narrow m06b-card">
+          <div class="m06b-icon" id="m06b-icon" aria-hidden="true"></div>
+          <h2 class="text-title" id="m06b-title">Đã gửi cho anh Nam</h2>
+          <p class="text-body" style="color:var(--color-text-secondary)">Bác chờ con gọi lại nhé (thao tác mô phỏng)</p>
+
+          <div class="card--soft-danger" style="width:100%">
+            <p class="text-body-medium" style="color:var(--color-danger-text)">
+              Trong lúc chờ, bác đừng chuyển tiền cho ai và không đọc mã OTP.
+            </p>
+          </div>
+
+          <button type="button" class="btn btn--primary btn--full" data-nav="M03">Về trang chủ</button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

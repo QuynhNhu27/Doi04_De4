@@ -1,0 +1,47 @@
+<!--
+  Mã màn hình: M04c | Tên: M04_KiemTra_DangNghe | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Sóng âm giọng nói mô phỏng — điểm cộng chế độ giọng nói cho người cao tuổi)
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung phản hồi trực quan khi nhận xong số điện thoại mẫu.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M04_KiemTra_DangNghe — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="m04c-body">
+  <main class="m04c-overlay">
+    <div class="m04c-stage">
+      <div class="m04c-ring m04c-ring--outer voice-wave-ring" aria-hidden="true"></div>
+      <div class="m04c-ring m04c-ring--mid voice-wave-ring" aria-hidden="true"></div>
+      <button type="button" class="m04c-mic-btn" id="m04c-mic-btn" aria-label="Bấm để mô phỏng đã nghe số điện thoại">
+        <span id="m04c-mic-icon"></span>
+      </button>
+    </div>
+
+    <h1 class="m04c-title">Mời bác đọc số điện thoại</h1>
+    <p class="m04c-sub">Ví dụ: không chín một hai ba bốn năm sáu bảy tám (mô phỏng giọng nói)</p>
+
+    <div class="m04c-actions">
+      <button type="button" class="btn btn--primary btn--full" id="m04c-simulate-btn">
+        Giả lập đã nghe: 0912 345 678
+      </button>
+      <button type="button" class="btn btn--outline-light btn--full" id="m04c-stop-btn">
+        Dừng và quay lại
+      </button>
+    </div>
+  </main>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

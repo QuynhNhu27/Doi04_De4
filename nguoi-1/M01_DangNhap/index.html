@@ -1,0 +1,88 @@
+<!--
+  Mã màn hình: M01a | Tên: M01_DangNhap | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Người cao tuổi — chữ 22px, nút 64px) | MẪU PHONG CÁCH THIẾT KẾ TOÀN NHÓM
+  Layout: AuthLayout 2 cột Desktop (trái: khiên bảo mật + slogan + nền sao băng; phải: form card) / 1 cột Mobile.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung kiểm tra định dạng số điện thoại mẫu khi bấm Đăng nhập (không lưu mật khẩu).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M01_DangNhap — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="auth-shell m01a-page">
+    <div class="auth-grid">
+      <!-- Cột trái Desktop: Thương hiệu, Khiên bảo mật SVG & Lời hứa sản phẩm -->
+      <section class="auth-brand">
+        <span class="m01a-pill-badge">An toàn số · TP Đồng Nai 2026</span>
+        <img class="auth-brand__shield" src="../../shared/assets/icons/shield-hero.svg" alt="Khiên bảo mật Lá Chắn Số">
+        <h1 class="auth-brand__title">Lá Chắn Số</h1>
+        <p class="auth-brand__slogan">
+          Kiểm tra trong 10 giây, hỏi người thân bằng 1 chạm, học nhận diện trong 1 phút.
+        </p>
+
+        <div class="auth-brand__highlights">
+          <div class="auth-highlight-item">
+            <span class="m01a-dot m01a-dot--cyan"></span>
+            <span>Tra cứu nhanh số điện thoại, đường dẫn và số tài khoản nghi ngờ</span>
+          </div>
+          <div class="auth-highlight-item">
+            <span class="m01a-dot m01a-dot--teal"></span>
+            <span>Giao diện chữ lớn 22px, hỗ trợ giọng nói cho người cao tuổi 65 tuổi</span>
+          </div>
+          <div class="auth-highlight-item">
+            <span class="m01a-dot m01a-dot--purple"></span>
+            <span>Hỏi người thân chỉ định chỉ bằng 1 chạm trước khi chuyển tiền</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cột phải Desktop / Khối dưới Mobile: Card biểu mẫu Đăng nhập -->
+      <main class="auth-form-card">
+        <div>
+          <h2 class="m01a-form-title">Đăng nhập</h2>
+          <p class="m01a-form-sub">Đăng nhập để đồng bộ người thân và tiến độ học tập</p>
+        </div>
+
+        <form class="m01a-form" id="m01a-login-form" novalidate>
+          <div class="m01a-field">
+            <label class="m01a-label" for="m01a-phone">Số điện thoại</label>
+            <input id="m01a-phone" type="tel" class="input" placeholder="Nhập số điện thoại" autocomplete="off">
+          </div>
+
+          <div class="m01a-field">
+            <label class="m01a-label" for="m01a-password">Mật khẩu</label>
+            <input id="m01a-password" type="password" class="input" placeholder="Nhập mật khẩu" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Đăng nhập</button>
+        </form>
+
+        <p class="m01a-switch">
+          Chưa có tài khoản?
+          <a class="m01a-link" data-nav="M01b" href="../M01_DangKy/index.html">Đăng ký ngay</a>
+        </p>
+
+        <div class="m01a-divider"><span>hoặc trải nghiệm tức thì</span></div>
+
+        <button type="button" class="btn btn--outline-light btn--full" data-nav="M02">
+          Dùng ngay, không cần đăng ký
+        </button>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

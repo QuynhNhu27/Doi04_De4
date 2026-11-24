@@ -1,0 +1,34 @@
+/* M04_KiemTra_SoDienThoai — Scoped styles (Người 2) */
+.m04a-tool-card { display: flex; flex-direction: column; gap: 16px; }
+.m04a-icon { width: 22px; height: 22px; display: inline-flex; }
+.m04a-ai-banner { display: flex; align-items: center; gap: 14px; transition: transform 160ms ease; }
+.m04a-ai-banner:hover { transform: translateY(-1px); }
+.m04a-side { display: flex; flex-direction: column; gap: 16px; }
+.m04a-guide-card { display: flex; flex-direction: column; gap: 12px; }
+.m04a-samples { display: flex; flex-direction: column; gap: 8px; }
+.m04a-sample-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.m04a-sample-btn:hover { border-color: var(--brand-blue); }
+
+@media (max-width: 480px) {
+  .m04a-tool-card .tab-btn { white-space: nowrap; font-size: 14px; padding: 8px 4px; }
+}
+
+.m04a-steps { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.m04a-steps li { display: flex; gap: 12px; align-items: flex-start; }
+.m04a-step-no {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--grad-navy-blue); color: #fff; font-size: 14px; font-weight: 600;
+}

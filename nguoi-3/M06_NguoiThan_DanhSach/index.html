@@ -1,0 +1,56 @@
+<!--
+  Mã màn hình: M06a | Tên: M06_NguoiThan_DanhSach | Thành viên: Người 3 (feat/member-3)
+  Nhóm: A | Luồng chính: M05c → M06a → M06b
+  Desktop: 2 cột (trái: danh sách người thân với nút Gọi/Gửi tin mô phỏng; phải: xem trước tin nhắn soạn sẵn).
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh xem trước tin nhắn có thể chọn tình huống (Cuộc gọi / Tin nhắn / Đường dẫn).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M06_NguoiThan_DanhSach — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="grid-split-7-5">
+          <!-- Danh sách người thân -->
+          <section class="m06a-list-col">
+            <div class="m06a-list" id="m06a-list"></div>
+            <button type="button" class="btn btn--secondary btn--full" data-nav="M07">
+              + Thêm người thân mới
+            </button>
+          </section>
+
+          <!-- Khung xem trước nội dung tin nhắn -->
+          <aside class="m06a-side-col">
+            <section class="card--soft-blue">
+              <span class="badge badge--soft-blue">Xem trước nội dung tin nhắn tự động</span>
+              <p class="text-body" id="m06a-preview" style="margin-top:12px"></p>
+            </section>
+            <section class="card">
+              <p class="text-sub-medium">Lưu ý prototype</p>
+              <p class="text-sub" style="margin-top:6px">
+                Mọi thao tác Gọi và Gửi tin trên bản trình diễn này đều là mô phỏng, không gọi hay nhắn tới số điện thoại thật.
+              </p>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* M04_KiemTra_DanTinNhan — Scoped styles (Người 2) */
+.m04b-card, .m04b-guide { display: flex; flex-direction: column; gap: 16px; }
+.m04b-textarea { min-height: 170px; }
+.m04b-ai-note { display: flex; align-items: center; gap: 14px; }
+.m04b-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.m04b-list { display: flex; flex-direction: column; gap: 10px; }
+@media (min-width: 640px) {
+  .m04b-actions { grid-template-columns: 1fr 1.3fr; }
+}
+
+@media (max-width: 480px) {
+  .m04b-card .tab-btn { white-space: nowrap; font-size: 14px; padding: 8px 4px; }
+}

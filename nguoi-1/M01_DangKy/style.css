@@ -1,0 +1,8 @@
+/* M01_DangKy — Scoped styles (Người 1) */
+.m01b-form-title { font-size: 26px; font-weight: 600; color: #FFFFFF; }
+.m01b-form-sub { font-size: 15px; color: #9FB6CC; margin-top: 4px; }
+.m01b-form { display: flex; flex-direction: column; gap: 16px; }
+.m01b-field { display: flex; flex-direction: column; gap: 6px; }
+.m01b-label { font-size: 16px; font-weight: 500; color: #EAF1F8; }
+.m01b-switch { text-align: center; font-size: 16px; color: #9FB6CC; }
+.m01b-link { color: #38BDF8; font-weight: 500; text-decoration: underline; }

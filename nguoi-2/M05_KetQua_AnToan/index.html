@@ -1,0 +1,64 @@
+<!--
+  Mã màn hình: M05a | Tên: M05_KetQua_AnToan | Thành viên: Người 2 (feat/member-2)
+  Nhóm: A | Kết quả AN TOÀN (xanh lá) — Desktop 2 cột (AlertCard + hành động | Lý do + hướng dẫn).
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh thẻ hướng dẫn hành động tiếp theo cho trạng thái AN TOÀN.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var s = {};
+      try { s = JSON.parse(localStorage.getItem('lachanso_demo_state_v2')) || {}; } catch (e) {}
+      var m = s.themeMode || 'system';
+      var toi = m === 'dark' || (m === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+      var h = document.documentElement;
+      if (!h.getAttribute('data-theme')) h.setAttribute('data-theme', toi ? 'dark' : 'light');
+      h.classList.add('n2-an');
+      var giam = s.motionEnabled === false || matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var quaMenu = false;
+      try { quaMenu = sessionStorage.getItem('n2-qua-menu') === '1'; sessionStorage.removeItem('n2-qua-menu'); } catch (e) {}
+      var r = document.referrer;
+      if (r && r.indexOf(location.host) > -1 && r.indexOf('/nguoi-2/') === -1) quaMenu = true;
+      if (!giam && quaMenu) h.classList.add('n2-hl-sap');
+      setTimeout(function () { h.classList.remove('n2-an', 'n2-hl-sap'); }, 3000);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M05_KetQua_AnToan — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="../nguoi-2.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="grid-split-7-5">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div id="m05a-alert"></div>
+            <button type="button" class="btn btn--primary btn--full" id="m05a-home" data-nav="M03">Về trang chủ</button>
+            <div class="grid-actions-2">
+              <button type="button" class="btn btn--secondary btn--full" id="m05a-speak">Nghe kết quả</button>
+              <button type="button" class="btn btn--secondary btn--full" id="m05a-report">Báo cáo</button>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div id="m05a-reason"></div>
+            <section class="card" id="m05a-next-steps"></section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!--
+  Mã màn hình: M07 | Tên: M07_ThemNguoiThan | Thành viên: Người 3 (feat/member-3)
+  Nhóm: A | Desktop: 2 cột (biểu mẫu vừa phải + thẻ giải thích bên cạnh); Mobile: 1 cột.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung kiểm tra định dạng số điện thoại người thân (dữ liệu mẫu).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M07_ThemNguoiThan — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="grid-split-7-5">
+          <form class="card" id="m07-form" style="display:flex;flex-direction:column;gap:16px" novalidate>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label class="text-sub-medium" for="m07-name">Tên người thân</label>
+              <input id="m07-name" type="text" class="input" placeholder="Ví dụ: Anh Nam">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label class="text-sub-medium" for="m07-phone">Số điện thoại</label>
+              <input id="m07-phone" type="tel" class="input" placeholder="Ví dụ: 0938 111 222">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span class="text-sub-medium">Quan hệ</span>
+              <div class="pill-grid-4" role="radiogroup" aria-label="Quan hệ">
+                <button type="button" class="pill-choice is-active" data-rel="Con trai">Con trai</button>
+                <button type="button" class="pill-choice" data-rel="Con gái">Con gái</button>
+                <button type="button" class="pill-choice" data-rel="Cháu">Cháu</button>
+                <button type="button" class="pill-choice" data-rel="Khác">Khác</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Lưu người thân</button>
+            <button type="button" class="btn btn--secondary btn--danger-outline btn--full is-hidden" id="m07-delete">
+              Xoá người này
+            </button>
+          </form>
+
+          <aside class="card--soft-blue" style="display:flex;flex-direction:column;gap:10px">
+            <span class="badge badge--soft-blue" style="align-self:flex-start">Cách hoạt động</span>
+            <h2 class="text-card-title">Hỏi người thân chỉ bằng 1 chạm</h2>
+            <p class="text-sub">
+              Người này sẽ nhận tin nhắn có sẵn số điện thoại/đường dẫn đáng ngờ khi bác bấm nút Hỏi người thân, giúp con cháu kiểm chứng kịp thời trước khi bác chuyển tiền.
+            </p>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Lá Chắn Số — Chế độ tối (RULE.md mục 3)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --color-bg-page: #081421;
+  --color-bg-subtle: #0D1E30;
+  --color-surface: #102437;
+  --color-surface-elevated: #142C44;
+  --color-surface-glass: rgba(16, 36, 55, 0.82);
+  --color-border: #1C3A54;
+  --color-border-strong: #295073;
+
+  --color-text: #EAF1F8;
+  --color-text-secondary: #93A8BE;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: #93A8BE;
+
+  --color-primary: #2E7FD1;
+  --color-primary-action: #2E7FD1;
+  --color-primary-soft: #15314B;
+  --color-accent: #5BA3E0;
+  --color-cyan-soft: rgba(56, 189, 248, 0.16);
+  --color-teal-soft: rgba(20, 184, 166, 0.18);
+  --color-purple-soft: rgba(139, 92, 246, 0.2);
+
+  --color-safe: #3FCFA2;
+  --color-safe-text: #6EE7B7;
+  --color-safe-soft: #0E3A30;
+
+  --color-warning: #FFC166;
+  --color-warning-text: #FCD34D;
+  --color-warning-soft: #3D2E12;
+
+  --color-danger: #FF6B6B;
+  --color-danger-text: #FCA5A5;
+  --color-danger-soft: #3D1618;
+
+  --color-header-bg: rgba(8, 20, 33, 0.86);
+  --color-bottom-nav-bg: rgba(8, 30, 51, 0.95);
+  --color-sidebar-bg: #04162B;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.36);
+  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.45);
+}
+
+/* Nhóm B ở chế độ tối: nền trời đêm #03142B để MeteorBackground hiển thị rõ ràng */
+[data-theme="dark"][data-group="B"] {
+  --color-bg-page: #03142B;
+  --color-header-bg: rgba(3, 20, 43, 0.72);
+}
+
+[data-theme="dark"][data-group="B"] .app-shell,
+[data-theme="dark"][data-group="B"] .app-main {
+  background: transparent;
+}
+
+[data-theme="dark"][data-group="B"] .card {
+  background-color: rgba(16, 36, 55, 0.88);
+  backdrop-filter: blur(10px);
+}

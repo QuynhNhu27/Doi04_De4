@@ -1,0 +1,48 @@
+<!--
+  Mã màn hình: M09 | Tên: M09_DanhSachBaiHoc | Thành viên: Người 3 (feat/member-3)
+  Nhóm: B (Học sinh & Tình nguyện viên — chữ 18px, nút 56px, có sao băng ở chế độ tối)
+  Desktop: Hero tiến độ gradient + Grid 2-3 cột đủ 10 bài học; Mobile: danh sách 1 cột.
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung bộ lọc nhanh theo trạng thái Đã học / Chưa học.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M09_DanhSachBaiHoc — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <section class="m09-hero">
+          <div class="m09-hero__top">
+            <div>
+              <span class="m09-chip">Kỹ năng số 1 phút</span>
+              <h2 class="m09-hero__title" id="m09-progress-title">Đã học 3/10 bài</h2>
+              <p class="m09-hero__sub">Hoàn thành 10 tình huống thực tế và làm bài kiểm tra để nhận huy hiệu Mắt tinh.</p>
+            </div>
+            <a class="btn btn--white btn--inline" data-nav="M11a" href="../../nguoi-4/M11_BaiKiemTra_CauHoi/index.html">
+              Làm bài kiểm tra ngay
+            </a>
+          </div>
+          <div id="m09-progress-bar"></div>
+        </section>
+
+        <section class="m09-grid" id="m09-list" aria-label="Danh sách 10 bài học"></section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

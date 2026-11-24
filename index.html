@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="0" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lá Chắn Số — Đề 4 · Hackathon TP Đồng Nai 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./shared/styles/tokens.css">
+  <link rel="stylesheet" href="./shared/styles/base.css">
+  <link rel="stylesheet" href="./shared/styles/responsive.css">
+  <link rel="stylesheet" href="./shared/styles/themes.css">
+  <link rel="stylesheet" href="./shared/styles/animations.css">
+  <style>
+    .entry-shell {
+      position: relative;
+      min-height: 100vh;
+      background-color: #03142B;
+      color: #FFFFFF;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+    .entry-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 720px;
+      padding: clamp(28px, 4vw, 44px);
+      border-radius: 28px;
+      background: rgba(16, 36, 55, 0.78);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+    }
+    .entry-actions {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .entry-flow {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 16px;
+      background-color: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      font-size: 15px;
+      color: #E0F2FE;
+    }
+    .entry-dev {
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .entry-actions { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="entry-shell" id="entry-shell">
+    <main class="entry-card">
+      <img src="./shared/assets/icons/shield-hero.svg" alt="Khiên bảo mật Lá Chắn Số" width="128" height="128">
+      <h1 class="auth-brand__title">Lá Chắn Số</h1>
+      <p class="auth-brand__slogan">
+        Kiểm tra trong 10 giây, hỏi người thân bằng 1 chạm, học nhận diện trong 1 phút.
+      </p>
+
+      <div class="entry-flow">
+        <strong>Luồng trình diễn chính thức (5 màn):</strong>
+        M03 Trang chủ → M04a Kiểm tra nhanh → M05c NGUY HIỂM → M06a Hỏi người thân → M06b Đã gửi
+      </div>
+
+      <div class="entry-actions">
+        <a class="btn btn--primary btn--full" href="./nguoi-1/M03_TrangChu/index.html">
+          Vào Trang chủ (Luồng chính)
+        </a>
+        <a class="btn btn--outline-light btn--full" href="./nguoi-1/M01_DangNhap/index.html">
+          Bắt đầu từ M01 Đăng nhập
+        </a>
+      </div>
+
+      <div class="entry-dev">
+        <a class="btn btn--white btn--inline" href="./preview/index.html">Mở Preview 30 bản (Desktop / Tablet / Mobile)</a>
+        <a class="btn btn--outline-light btn--inline" href="./nguoi-1/M00_ThuVien/index.html">Thư viện M00_ThuVien</a>
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { initTheme } from './shared/scripts/theme.js';
+    import { createMeteorBackground } from './shared/components/MeteorBackground.js';
+    initTheme();
+    document.getElementById('entry-shell')?.prepend(createMeteorBackground());
+  </script>
+</body>
+</html>

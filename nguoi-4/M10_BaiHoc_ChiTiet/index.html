@@ -1,0 +1,54 @@
+<!--
+  Mã màn hình: M10 | Tên: M10_BaiHoc_ChiTiet | Thành viên: Người 4 (feat/member-4)
+  Nhóm: B | Desktop: 2 cột (minh hoạ tình huống bên trái + nội dung 5 bước, tiến độ, nút Nghe & Tiếp bên phải).
+  TODO thành viên cần hoàn thiện:
+  - Bổ sung tranh minh hoạ SVG riêng cho từng bước trong 5 bước bài học.
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M10_BaiHoc_ChiTiet — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="m10-dots" id="m10-dots" aria-label="Tiến độ 5 bước"></div>
+
+        <section class="card m10-lesson-grid">
+          <div class="m10-visual" aria-hidden="true">
+            <img src="../../shared/assets/icons/shield-hero.svg" alt="" width="150" height="150">
+            <span class="m10-step-pill" id="m10-step-badge">Bước 1 / 5</span>
+          </div>
+
+          <div class="m10-content">
+            <span class="badge badge--soft-blue" style="align-self:flex-start">Bài học ngắn 1 phút</span>
+            <h2 class="text-title" id="m10-title"></h2>
+            <p class="text-body" id="m10-body"></p>
+
+            <div class="m10-actions">
+              <button type="button" class="btn btn--secondary btn--full" id="m10-listen">
+                <span id="m10-vol" style="width:20px;height:20px;display:inline-flex"></span>
+                <span>Nghe bài học</span>
+              </button>
+              <button type="button" class="btn btn--primary btn--full" id="m10-next">Tiếp theo</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Lá Chắn Số — Design Tokens (RULE.md v2.0 — Website Responsive)
+   THƯ MỤC DÙNG CHUNG shared/ — DO NHÓM TRƯỞNG QUẢN LÝ.
+   ========================================================================== */
+
+:root {
+  /* --- Font chữ --- */
+  --font-family: 'Inter', 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* --- Màu thương hiệu mở rộng (Modern Cybersecurity + Friendly Digital Safety) --- */
+  --brand-navy: #062E55;
+  --brand-navy-deep: #03142B;
+  --brand-blue: #2563EB;
+  --brand-blue-hover: #1D4ED8;
+  --brand-accent: #11598F;
+  --brand-cyan: #38BDF8;
+  --brand-teal: #14B8A6;
+  --brand-purple: #8B5CF6;
+  --brand-indigo: #6366F1;
+
+  /* --- Màu giao diện chế độ sáng --- */
+  --color-bg-page: #F4F7FA;
+  --color-bg-subtle: #EAF0F7;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-glass: rgba(255, 255, 255, 0.84);
+  --color-border: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  --color-text: #0B1B2E;
+  --color-text-secondary: #5C7089;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: #9FB6CC;
+
+  --color-primary: #062E55;
+  --color-primary-action: #2563EB;
+  --color-primary-soft: #DEE9F3;
+  --color-accent: #11598F;
+  --color-cyan-soft: #E0F2FE;
+  --color-teal-soft: #CCFBF1;
+  --color-purple-soft: #EDE9FE;
+
+  /* --- Màu trạng thái nhất quán toàn website --- */
+  --color-safe: #12A57A;
+  --color-safe-text: #0B7A59;
+  --color-safe-soft: #E6F7F1;
+
+  --color-warning: #F2A33C;
+  --color-warning-text: #9A5B08;
+  --color-warning-soft: #FDF0DA;
+
+  --color-danger: #D92D2D;
+  --color-danger-text: #B42318;
+  --color-danger-soft: #FBE4E4;
+
+  /* --- Thanh điều hướng --- */
+  --color-header-bg: rgba(255, 255, 255, 0.9);
+  --color-bottom-nav-bg: rgba(255, 255, 255, 0.96);
+  --color-sidebar-bg: #062E55;
+
+  /* --- Gradients dùng chung (RULE.md mục 2 & mục 7) --- */
+  --grad-navy-blue: linear-gradient(135deg, #062E55 0%, #11598F 52%, #2563EB 100%);
+  --grad-hero-night: linear-gradient(135deg, #03142B 0%, #062E55 55%, #11598F 100%);
+  --grad-blue-cyan: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+  --grad-blue-purple: linear-gradient(135deg, #2563EB 0%, #6366F1 55%, #8B5CF6 100%);
+  --grad-teal-blue: linear-gradient(135deg, #14B8A6 0%, #11598F 55%, #2563EB 100%);
+  --grad-danger: linear-gradient(135deg, #D92D2D 0%, #B91C1C 100%);
+  --grad-sidebar: linear-gradient(180deg, #03142B 0%, #062E55 58%, #0A3864 100%);
+
+  /* --- Đổ bóng mềm & Glow --- */
+  --shadow-sm: 0 2px 8px rgba(6, 46, 85, 0.06);
+  --shadow-md: 0 8px 24px rgba(6, 46, 85, 0.09);
+  --shadow-lg: 0 18px 40px rgba(3, 20, 43, 0.14);
+  --shadow-glow-blue: 0 10px 28px rgba(37, 99, 235, 0.28);
+  --shadow-glow-cyan: 0 0 24px rgba(56, 189, 248, 0.35);
+  --shadow-glow-danger: 0 10px 24px rgba(217, 45, 45, 0.3);
+
+  /* --- Kích thước layout responsive --- */
+  --sidebar-width: 256px;
+  --header-height-mobile: 60px;
+  --header-height-desktop: 72px;
+  --bottom-nav-height: 68px;
+  --content-max-width: 1440px;
+
+  /* --- Bo góc --- */
+  --radius-pill: 999px;
+  --radius-card: 18px;
+  --radius-card-lg: 24px;
+  --radius-input: 14px;
+  --radius-icon: 12px;
+  --radius-checkbox: 6px;
+
+  /* --- Chuyển động --- */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 160ms;
+  --t-base: 240ms;
+
+  /* --- Cỡ chữ & chiều cao mặc định theo Nhóm A (Người cao tuổi) --- */
+  --text-body: clamp(19px, 2vw, 22px);
+  --text-title: clamp(24px, 2.6vw, 28px);
+  --text-card-title: clamp(20px, 2.2vw, 22px);
+  --text-sub: 16px;
+  --text-status: clamp(26px, 3vw, 32px);
+
+  --btn-primary-h: 64px;
+  --btn-secondary-h: 56px;
+  --btn-inline-h: 44px;
+  --input-h: 60px;
+  --icon-box-size: 46px;
+  --icon-size: 26px;
+}
+
+/* --- Nhóm A: Người cao tuổi (M01–M08, M13, E00, E04, E05, E06) --- */
+[data-group="A"] {
+  --text-body: clamp(19px, 2vw, 22px);
+  --text-title: clamp(24px, 2.6vw, 28px);
+  --text-card-title: clamp(20px, 2.2vw, 22px);
+  --text-sub: 16px;
+
+  --btn-primary-h: 64px;
+  --btn-secondary-h: 56px;
+  --btn-inline-h: 44px;
+  --input-h: 60px;
+  --icon-box-size: 46px;
+  --icon-size: 26px;
+}
+
+/* --- Nhóm B: Học sinh & Đội tình nguyện (M09–M12, E12) --- */
+[data-group="B"] {
+  --text-body: 18px;
+  --text-title: clamp(22px, 2.4vw, 26px);
+  --text-card-title: clamp(18px, 2vw, 20px);
+  --text-sub: 15px;
+
+  --btn-primary-h: 56px;
+  --btn-secondary-h: 48px;
+  --btn-inline-h: 40px;
+  --input-h: 52px;
+  --icon-box-size: 42px;
+  --icon-size: 24px;
+}
+
+/* --- Chế độ bật chữ lớn (Trợ năng trong M13) --- */
+[data-large-text="true"][data-group="A"] {
+  --text-body: 24px;
+  --text-title: 30px;
+  --text-card-title: 24px;
+  --text-sub: 18px;
+}
+
+[data-large-text="true"][data-group="B"] {
+  --text-body: 20px;
+  --text-title: 28px;
+  --text-card-title: 22px;
+  --text-sub: 16px;
+}

@@ -1,0 +1,18 @@
+/* M11_BaiKiemTra_KetQua — Scoped styles (Người 4 · Nhóm B) */
+.m11b-card { padding: 32px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+.m11b-ring {
+  width: 148px;
+  height: 148px;
+  border-radius: 999px;
+  border: 10px solid var(--color-safe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 28px rgba(18, 165, 122, 0.24);
+}
+.m11b-score { font-size: 40px; font-weight: 600; color: var(--color-text); }
+.m11b-badge-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.m11b-badge { width: 64px; height: 64px; border-radius: 18px; background-color: var(--color-warning-soft); color: var(--color-warning); display: inline-flex; align-items: center; justify-content: center; }
+.m11b-badge svg { width: 38px; height: 38px; }
+.m11b-actions { width: 100%; display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 600px) { .m11b-actions { grid-template-columns: 1.2fr 1fr; } }

@@ -1,0 +1,17 @@
+/* M08_BaoCao_Form — Scoped styles (Người 3) */
+.m08a-form, .m08a-side { display: flex; flex-direction: column; gap: 16px; }
+.m08a-field { display: flex; flex-direction: column; gap: 6px; }
+.m08a-upload {
+  width: 100%;
+  min-height: 84px;
+  padding: 16px;
+  border-radius: var(--radius-card);
+  border: 2px dashed var(--brand-blue);
+  background-color: var(--color-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.m08a-upload-icon { width: 24px; height: 24px; color: var(--brand-blue); flex-shrink: 0; }
+.m08a-checks { display: flex; flex-direction: column; gap: 6px; }

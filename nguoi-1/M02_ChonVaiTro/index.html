@@ -1,0 +1,43 @@
+<!--
+  Mã màn hình: M02 | Tên: M02_ChonVaiTro | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Người cao tuổi) | Desktop: 3 thẻ vai trò xếp ngang + nền công nghệ nhẹ; Mobile: xếp dọc.
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh hình minh hoạ icon riêng cho từng vai trò (Người lớn tuổi / Học sinh / Tình nguyện viên).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M02_ChonVaiTro — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="tech-grid-bg">
+  <div class="m02-wrapper">
+    <main class="m02-container">
+      <header class="m02-header">
+        <img src="../../shared/assets/icons/shield-logo.svg" alt="" width="56" height="56">
+        <h1 class="text-title">Bác là ai?</h1>
+        <p class="text-sub">Chọn vai trò để Lá Chắn Số điều chỉnh cỡ chữ và chức năng phù hợp nhất</p>
+      </header>
+
+      <section class="grid-3 m02-roles" id="m02-role-list" role="radiogroup" aria-label="Chọn vai trò"></section>
+
+      <section class="card m02-ward-card">
+        <label class="text-sub-medium" for="m02-ward-select">Phường / Xã của bác tại Đồng Nai</label>
+        <select id="m02-ward-select" class="input"></select>
+        <button type="button" class="btn btn--primary btn--full" id="m02-done-btn">Xong — Vào Trang chủ</button>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

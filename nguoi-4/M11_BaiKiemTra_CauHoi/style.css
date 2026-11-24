@@ -1,0 +1,18 @@
+/* M11_BaiKiemTra_CauHoi — Scoped styles (Người 4 · Nhóm B) */
+.m11a-sms-card, .m11a-answer-card { display: flex; flex-direction: column; gap: 16px; }
+.m11a-sms-bubble {
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--color-bg-subtle);
+  border: 1.5px solid var(--color-border-strong);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text);
+  word-break: break-word;
+}
+.m11a-choices { display: flex; flex-direction: column; gap: 12px; }
+.m11a-choice { min-height: 64px; width: 100%; font-size: 20px; }
+.m11a-choice.is-selected { border-color: var(--brand-blue); background-color: var(--color-primary-soft); color: var(--color-primary); }
+.m11a-explain { padding: 16px; border-radius: 14px; display: flex; flex-direction: column; gap: 6px; }
+.m11a-explain--ok { background-color: var(--color-safe-soft); border: 1.5px solid var(--color-safe); }
+.m11a-explain--err { background-color: var(--color-danger-soft); border: 1.5px solid var(--color-danger); }

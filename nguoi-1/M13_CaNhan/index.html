@@ -1,0 +1,120 @@
+<!--
+  Mã màn hình: M13 | Tên: M13_CaNhan | Thành viên: Người 1 (feat/member-1)
+  Nhóm: A (Người cao tuổi) | Desktop: 2 cột (Hồ sơ + Cài đặt giao diện & trợ năng | Người thân + Lịch sử + Đăng xuất).
+  Bao gồm tùy chọn Bật/tắt hiệu ứng chuyển động & sao băng theo yêu cầu mới.
+  TODO thành viên cần hoàn thiện:
+  - Tinh chỉnh nội dung hộp thoại lịch sử kiểm tra và lịch sử báo cáo (mô phỏng).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M13_CaNhan — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <!-- Thẻ hồ sơ -->
+        <section class="card m13-profile">
+          <div class="avatar avatar--lg" id="m13-avatar">T</div>
+          <div class="m13-profile__info">
+            <h2 class="text-title" id="m13-name">Bác Tư</h2>
+            <p class="text-sub" id="m13-role-ward">Người lớn tuổi · Phường Trấn Biên</p>
+          </div>
+          <a class="btn btn--secondary btn--inline" data-nav="M02" href="../M02_ChonVaiTro/index.html">Đổi vai trò</a>
+        </section>
+
+        <!-- Lưới 2 cột trên Desktop / 1 cột trên Mobile -->
+        <section class="grid-2">
+          <!-- Cột trái: Cài đặt giao diện & trợ năng -->
+          <div class="card m13-panel">
+            <h3 class="text-card-title">Cài đặt giao diện & Trợ năng</h3>
+
+            <button type="button" class="m13-row" id="m13-change-ward">
+              <span class="text-body">Đổi phường / xã</span>
+              <span class="m13-chevron" data-chevron></span>
+            </button>
+
+            <div class="m13-row">
+              <div>
+                <p class="text-body">Bật chữ lớn</p>
+                <p class="text-sub">Tăng cỡ chữ toàn website dễ đọc hơn</p>
+              </div>
+              <button type="button" class="switch-btn" id="m13-toggle-large" role="switch" aria-checked="false" aria-label="Bật chữ lớn">
+                <span class="switch-btn__knob"></span>
+              </button>
+            </div>
+
+            <div class="m13-row">
+              <div>
+                <p class="text-body">Bật giọng nói</p>
+                <p class="text-sub">App sẽ đọc kết quả kiểm tra</p>
+              </div>
+              <button type="button" class="switch-btn" id="m13-toggle-voice" role="switch" aria-checked="true" aria-label="Bật giọng nói">
+                <span class="switch-btn__knob"></span>
+              </button>
+            </div>
+
+            <div class="m13-row">
+              <div>
+                <p class="text-body">Hiệu ứng chuyển động</p>
+                <p class="text-sub">Bật/tắt sao băng và chuyển động (tự tôn trọng cài đặt máy)</p>
+              </div>
+              <button type="button" class="switch-btn" id="m13-toggle-motion" role="switch" aria-checked="true" aria-label="Bật hiệu ứng chuyển động">
+                <span class="switch-btn__knob"></span>
+              </button>
+            </div>
+
+            <div class="m13-theme-block">
+              <p class="text-body">Chế độ giao diện</p>
+              <div class="m13-theme-pills" role="radiogroup" aria-label="Chế độ giao diện">
+                <button type="button" class="pill-choice" data-theme-choice="system">Theo máy</button>
+                <button type="button" class="pill-choice" data-theme-choice="light">Luôn sáng</button>
+                <button type="button" class="pill-choice" data-theme-choice="dark">Luôn tối</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột phải: Quản lý người thân, Lịch sử & Đăng xuất -->
+          <div class="m13-right-col">
+            <div class="card m13-panel">
+              <h3 class="text-card-title">Quản lý & Lịch sử của tôi</h3>
+
+              <a class="m13-row" data-nav="M06a" href="../../nguoi-3/M06_NguoiThan_DanhSach/index.html">
+                <span class="text-body">Người thân của tôi</span>
+                <span class="m13-chevron" data-chevron></span>
+              </a>
+
+              <button type="button" class="m13-row" id="m13-history-reports">
+                <span class="text-body">Lịch sử báo cáo</span>
+                <span class="m13-chevron" data-chevron></span>
+              </button>
+
+              <button type="button" class="m13-row" id="m13-history-checks">
+                <span class="text-body">Lịch sử kiểm tra</span>
+                <span class="m13-chevron" data-chevron></span>
+              </button>
+            </div>
+
+            <button type="button" class="btn btn--secondary btn--danger-outline btn--full" data-nav="M01a">
+              Đăng xuất
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

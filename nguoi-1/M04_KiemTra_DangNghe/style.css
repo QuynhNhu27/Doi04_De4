@@ -1,0 +1,34 @@
+/* M04_KiemTra_DangNghe — Scoped styles (Người 1) */
+.m04c-body { background-color: #03142B; color: #FFFFFF; }
+.m04c-overlay {
+  min-height: 100vh;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  background: radial-gradient(circle at 50% 38%, rgba(37, 99, 235, 0.28) 0%, #03142B 68%);
+}
+.m04c-stage { position: relative; width: 210px; height: 210px; display: flex; align-items: center; justify-content: center; }
+.m04c-ring { position: absolute; border-radius: 999px; border: 2px solid #38BDF8; background-color: rgba(56, 189, 248, 0.14); }
+.m04c-ring--outer { width: 210px; height: 210px; }
+.m04c-ring--mid { width: 144px; height: 144px; animation-delay: 0.45s; }
+.m04c-mic-btn {
+  position: relative;
+  z-index: 2;
+  width: 82px;
+  height: 82px;
+  border-radius: 999px;
+  background: var(--grad-blue-cyan);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-glow-cyan);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.m04c-mic-btn svg { width: 34px; height: 34px; }
+.m04c-title { font-size: clamp(24px, 3vw, 32px); font-weight: 600; color: #FFFFFF; }
+.m04c-sub { font-size: 18px; color: #9FB6CC; max-width: 480px; }
+.m04c-actions { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }

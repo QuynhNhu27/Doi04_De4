@@ -1,0 +1,15 @@
+/* M00_ThuVien — Scoped styles (Người 1) */
+.m00-page { padding: 24px 16px 64px; }
+.m00-container { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+.m00-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.m00-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.m00-section { display: flex; flex-direction: column; gap: 14px; }
+.m00-swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.m00-swatch { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.m00-swatch__box { height: 50px; border-radius: 10px; border: 1px solid var(--color-border); }
+.m00-grad-card { height: 84px; border-radius: 16px; padding: 16px; color: #FFFFFF; display: flex; flex-direction: column; justify-content: flex-end; font-weight: 500; }
+.m00-mt { margin-top: 8px; }
+.m00-stack { display: flex; flex-direction: column; gap: 12px; }
+.m00-badges-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.m00-meteor-demo { position: relative; min-height: 280px; border-radius: 20px; overflow: hidden; display: flex; align-items: flex-end; border: 1px solid rgba(56, 189, 248, 0.3); }
+.m00-meteor-overlay { position: relative; z-index: 2; padding: 24px; }

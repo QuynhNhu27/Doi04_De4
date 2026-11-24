@@ -1,0 +1,20 @@
+/* M13_CaNhan — Scoped styles (Người 1) */
+.m13-profile { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.m13-profile__info { flex: 1 1 200px; }
+.m13-panel { display: flex; flex-direction: column; gap: 6px; }
+.m13-row {
+  width: 100%;
+  min-height: 62px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  text-align: left;
+}
+.m13-row:last-child { border-bottom: none; }
+.m13-chevron { width: 22px; height: 22px; color: var(--color-text-secondary); flex-shrink: 0; }
+.m13-theme-block { padding-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+.m13-theme-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.m13-right-col { display: flex; flex-direction: column; gap: 16px; }

@@ -1,0 +1,115 @@
+<!--
+  Mã màn hình: M04a | Tên: M04_KiemTra_SoDienThoai | Thành viên: Người 2 (feat/member-2)
+  Nhóm: A (Người cao tuổi — chữ 22px, nút 64px) | Luồng chính: M03 → M04a → M05c
+  Desktop: Chia 2 cột (trái: công cụ 3 tab + nút Dán/Nói + nút Kiểm tra + thẻ AI; phải: hướng dẫn & ví dụ thử nhanh).
+  TODO thành viên cần hoàn thiện:
+  - Mở rộng bộ quy tắc phân loại dữ liệu mẫu (SĐT / đường dẫn / số tài khoản).
+-->
+<!DOCTYPE html>
+<html lang="vi" data-root-depth="2" data-group="A">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var s = {};
+      try { s = JSON.parse(localStorage.getItem('lachanso_demo_state_v2')) || {}; } catch (e) {}
+      var m = s.themeMode || 'system';
+      var toi = m === 'dark' || (m === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+      var h = document.documentElement;
+      if (!h.getAttribute('data-theme')) h.setAttribute('data-theme', toi ? 'dark' : 'light');
+      h.classList.add('n2-an');
+      var giam = s.motionEnabled === false || matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var quaMenu = false;
+      try { quaMenu = sessionStorage.getItem('n2-qua-menu') === '1'; sessionStorage.removeItem('n2-qua-menu'); } catch (e) {}
+      var r = document.referrer;
+      if (r && r.indexOf(location.host) > -1 && r.indexOf('/nguoi-2/') === -1) quaMenu = true;
+      if (!giam && quaMenu) h.classList.add('n2-hl-sap');
+      setTimeout(function () { h.classList.remove('n2-an', 'n2-hl-sap'); }, 3000);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M04_KiemTra_SoDienThoai — Lá Chắn Số</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../../shared/styles/base.css">
+  <link rel="stylesheet" href="../../shared/styles/responsive.css">
+  <link rel="stylesheet" href="../../shared/styles/themes.css">
+  <link rel="stylesheet" href="../../shared/styles/animations.css">
+  <link rel="stylesheet" href="../nguoi-2.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-main">
+      <main class="page-container">
+        <div class="grid-split-7-5">
+          <!-- Cột trái: Công cụ kiểm tra nhanh -->
+          <section class="card m04a-tool-card">
+            <div class="tab-group n2-4tab" role="tablist" aria-label="Loại thông tin cần kiểm tra">
+              <button type="button" class="tab-btn is-active" role="tab" aria-selected="true" data-tab="phone">Số điện thoại</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="link">Đường dẫn</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="account">Số tài khoản</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="email">Email</button>
+            </div>
+
+            <div>
+              <label class="sr-only" for="m04a-input">Nhập thông tin cần kiểm tra</label>
+              <input id="m04a-input" type="text" class="input" placeholder="Nhập hoặc dán số điện thoại" autocomplete="off" inputmode="tel" aria-describedby="m04a-err">
+              <p id="m04a-err" class="text-sub is-hidden" style="color:var(--color-danger);font-weight:500;margin-top:8px" role="alert"></p>
+            </div>
+
+            <div class="grid-actions-2">
+              <button type="button" class="btn btn--secondary btn--full" id="m04a-paste-btn">
+                <span class="m04a-icon" id="m04a-icon-paste"></span>
+                <span>Dán</span>
+              </button>
+              <button type="button" class="btn btn--secondary btn--full" data-nav="M04c">
+                <span class="m04a-icon" id="m04a-icon-mic"></span>
+                <span>Nói</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn btn--primary btn--full" id="m04a-check-btn">Kiểm tra</button>
+
+            <!-- Lối vào nổi bật đến AI phân tích tin nhắn (M04b) -->
+            <a class="card--soft-purple m04a-ai-banner" data-nav="M04b" href="../M04_KiemTra_DanTinNhan/index.html">
+              <span class="icon-box icon-box--purple" id="m04a-icon-spark"></span>
+              <div style="flex:1;min-width:0">
+                <p class="text-sub-medium" style="color:var(--brand-purple)">AI phân tích tin nhắn (Điểm cộng)</p>
+                <p class="text-sub">Dán nguyên tin nhắn bác nhận được để AI chỉ ra dấu hiệu lừa đảo →</p>
+              </div>
+            </a>
+          </section>
+
+          <!-- Cột phải Desktop / Khối dưới Mobile: Hướng dẫn & Số mẫu thử nhanh -->
+          <aside class="m04a-side">
+            <section class="card m04a-guide-card">
+              <h2 class="text-card-title">Cách dùng 3 bước</h2>
+              <ol class="m04a-steps">
+                <li><span class="m04a-step-no">1</span><span class="text-sub">Chọn loại: số điện thoại, đường dẫn, số tài khoản hoặc email</span></li>
+                <li><span class="m04a-step-no">2</span><span class="text-sub">Dán, gõ hoặc bấm Nói để đọc số</span></li>
+                <li><span class="m04a-step-no">3</span><span class="text-sub">Bấm Kiểm tra, xem màu và lý do</span></li>
+              </ol>
+            </section>
+            <section class="card m04a-guide-card">
+              <span class="badge badge--soft-blue" style="align-self:flex-start">Thử nhanh dữ liệu mẫu</span>
+              <h2 class="text-card-title">Bấm vào một mẫu để điền nhanh</h2>
+              <div class="m04a-samples" id="m04a-samples"></div>
+            </section>
+
+            <section class="card--soft-warning">
+              <p class="text-sub-medium">Lưu ý an toàn</p>
+              <p class="text-sub" style="margin-top:4px">
+                Không bấm trực tiếp vào đường dẫn lạ. Hãy sao chép rồi dán vào ô kiểm tra trên hoặc nhờ người thân xem giúp.
+              </p>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
